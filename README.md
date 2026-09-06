@@ -145,6 +145,12 @@ Disable AOSP keyboard (it'll crash constantly if you don't).
     pm block com.android.inputdevices
     exit
 
+Note: You can block other apps if you're not going to use them.
+
+    pm block com.android.browser
+    pm block com.android.email
+    pm block com.android.calendar
+
 I included Adaway and NovaLauncher, this is the Nova from before they got bought out and included a bunch of spyware.
 
     adb install Nova-Launcher.apk
@@ -153,11 +159,11 @@ I included Adaway and NovaLauncher, this is the Nova from before they got bought
 If you don't want google, you can install apps from ApkMirror.
 F-Droid doesn't work for this device because it is too old I guess.
 
-## Google
+You can only install apps for Android <= 4.4.4
 
-You can add a google account if you want.
-
-Settings -> General -> Accounts
+* Firefox - https://www.apkmirror.com/apk/mozilla/firefox/variant-%7B%22arches_slug%22%3A%5B%22armeabi%22%5D%2C%22dpis_slug%22%3A%5B%22nodpi%22%5D%2C%22minapi_slug%22%3A%22minapi-8%22%7D/
+* Signal - https://www.apkmirror.com/apk/signal-foundation/signal-private-messenger/
+* VLC - https://www.apkmirror.com/apk/videolabs/vlc/
 
 ## Credits
 
