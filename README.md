@@ -16,6 +16,7 @@ This archives the files you need and gets through all the hurdles of the install
     chmod +x odin4
     gunzip Adaway.apk.gz
     gunzip Nova-Launcher.apk.gz
+    gunzip Ginger_Keyboard.apk.gz
     gunzip twrp-3.7.0_9-0-degas.tar.gz # don't untar it
     unar cm/cm.part01.rar
     unar oga/oga.part01.rar
@@ -95,9 +96,12 @@ device I'd be surprised if you didn't.
 If this doesen't automatically reboot to system, do it manually.
 Sometimes the screen will just go black, you can do `adb reboot`.
 
+At this point when it comes back up, the AOSP keyboard will not work, so
+just go through the basic setup.  We'll get to fixing it shortly.
+
 ## Re-Enable Developer Mode
 
-Settings -> General -> About Device -> Tap Build Number 10 times
+Settings -> General -> About Device -> Tap Build Number 7 times
 
 ## Re-Enable USB Debugging
 
@@ -122,6 +126,25 @@ Manually add your key.
 
 ## Apps
 
+The AOSP keyboard is broken, no clue why.
+
+    adb install Ginger_Keybaord-9.7.3.apk
+
+Settings -> Controls -> Language and Input
+
+* Set keyboard to Ginger Keyboard
+* Click Ginger Keyboard Settings
+* Click Languages
+* Make sure this is set to Ginger Keyboard, mine was AOSP.
+* Close settings out.
+
+Disable AOSP keyboard (it'll crash constantly if you don't).
+
+    adb shell
+    pm block com.android.inputmethod.latin
+    pm block com.android.inputdevices
+    exit
+
 I included Adaway and NovaLauncher, this is the Nova from before they got bought out and included a bunch of spyware.
 
     adb install Nova-Launcher.apk
@@ -130,14 +153,11 @@ I included Adaway and NovaLauncher, this is the Nova from before they got bought
 If you don't want google, you can install apps from ApkMirror.
 F-Droid doesn't work for this device because it is too old I guess.
 
-
-
 ## Google
 
 You can add a google account if you want.
 
 Settings -> General -> Accounts
-
 
 ## Credits
 
