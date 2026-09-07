@@ -1,10 +1,15 @@
 # Install Unofficial CyanogenMod to Galaxy Tab 4 7.0 SM-T230NU
 
-This archives the files you need and gets through all the hurdles of the install.  This is geared towards linux users, but could probably be adapted for Windows/Apple users.
+This archives the files you need and gets through all the hurdles of
+the install.  This is geared towards linux users, but could probably
+be adapted for Windows/Apple users.
+
+Back up your stuff and blah blah blah.
 
 ## Clone Repo and Extract
 
-    # install unar
+    # install unar, can do with arch or fedora or whatever with
+    # their package manager
     sudo apt install unar
 
     # clone
@@ -24,7 +29,7 @@ This archives the files you need and gets through all the hurdles of the install
     rm -rf oga/
     rm -rf cm/
 
-## TWRP
+## UDEV Setup
 
 In your host system:
 
@@ -40,14 +45,17 @@ Make sure your user is in the plugdev group, you'll need to reboot or login/logo
 
     sudo usermod -a -G plugdev $USER
 
+# TWRP
+
 Boot into Download mode (Volume Down, Home Btn, Power), install TWRP.
 
     ./odin4 -b twrp-3.7.0_9-0-degas.tar
 
-This may automatically boot to recovery, if not then get back with
-`adb reboot recovery` or Volume Up, Home Btn, Power.
+This may automatically boot to recovery.
 
 ## Manually Format
+
+Boot into TWRP if you aren't `adb reboot recovery` or Volume Up, Home Btn, Power.
 
 For some reason TWRP doesn't format properly.
 
