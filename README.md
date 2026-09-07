@@ -178,4 +178,4 @@ You can only install apps for Android <= 4.4.4
 * Unofficial CM11 - https://xdaforums.com/t/sm-t230-sm-t230nu-sm-t231-unofficial-cm-11-cm-14-1-based-android-4-4-4-7-1-2.3648887/
 * Odin4 - https://github.com/Llucs/odin4
 * SuperSU - https://supersuroot.org/
-* OpenGapps - https://archive.org/details/open_gapps-arm-4.4-nano-20220215
+* OpenGapps - https://opengapps.org/
